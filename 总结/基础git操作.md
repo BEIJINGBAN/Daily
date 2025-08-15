@@ -7,6 +7,12 @@ git init    										//初始化
 git add .											//增加所有
 git commit -m "备注内容" 				  			  //打备注
 
+git clone https://.....								//克隆项目
+
+git status											//查看状态
+
+git restore XX										//撤销某修改
+git restore --staged 								//撤销add
 
 git remote -v  										//查看远端git连接到哪个
 git remote add origin https:........    			//增加远端
@@ -23,7 +29,12 @@ git config user.email "你的邮箱"  		  			//设置邮箱
 
 git log											  	//查看提交历史
 
-git branch -m master main							//重命名分支
+git branch 											//查看本地所有分支
+git branch XXXX										//新建分支命名XXXX
+git branch -m master main							//重命名分支+
+git checkout XXXX									//切换到XXXX分支
+git checkout -b XXXX								//创建并切换到XXXX分支
+git merge XXXX										//将XXXX分支合并到当前分支
 ```
 
 
@@ -43,15 +54,23 @@ chore: 		一些不涉及到功能变动的小提交，比如修改文字表述�
 
 #### 2.详细展示
 
-```cmd
-git remote -v  										//查看远端git连接到哪个
+- 添加所有改动的数据
+
+```
+git add .
 ```
 
-<img src="C:\Users\BRKJ\AppData\Roaming\Typora\typora-user-images\image-20250808085230536.png" alt="image-20250808085230536" style="zoom:150%;" />
+![image-20250815092149634](C:\Users\BRKJ\AppData\Roaming\Typora\typora-user-images\image-20250815092149634.png)
 
+- 打上备注
 
+```
+git commit -m "备注内容" 	
+```
 
-推送远端
+![image-20250815092230170](C:\Users\BRKJ\AppData\Roaming\Typora\typora-user-images\image-20250815092230170.png)
+
+- 推送远端
 
 ```
 git push origin main
@@ -59,10 +78,19 @@ git push origin main
 
 ![image-20250812104835481](C:\Users\BRKJ\AppData\Roaming\Typora\typora-user-images\image-20250812104835481.png)
 
-查看提交历史
+- 查看提交历史
 
 ```
 git log
 ```
 
 ![image-20250812164507627](C:\Users\BRKJ\AppData\Roaming\Typora\typora-user-images\image-20250812164507627.png)
+
+- 查看连接远端
+
+```cmd
+git remote -v  										//查看远端git连接到哪个
+```
+
+<img src="C:\Users\BRKJ\AppData\Roaming\Typora\typora-user-images\image-20250808085230536.png" alt="image-20250808085230536" style="zoom:150%;" />
+
